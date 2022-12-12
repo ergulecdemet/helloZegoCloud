@@ -28,13 +28,10 @@ proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pr
 
 for iOS:
 To add permissions, open your_project/ios/Runner/Info.plist, and add the following code to the dict part:
-
-`<key>NSCameraUsageDescription</key>
-
+```
+<key>NSCameraUsageDescription</key>
 <string>We require camera access to connect to a call</string>
-
 <key>NSMicrophoneUsageDescription</key>
-
-<string>We require microphone access to connect to a call</string>`
-
+<string>We require microphone access to connect to a call</string>
+```
 SOURCE: https://docs.zegocloud.com/article/14821
