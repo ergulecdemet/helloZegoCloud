@@ -2,6 +2,9 @@
 
 It allows you to easily create your voice chat and live video chat applications in minutes with a developer-friendly API.
 
+# View
+![Screenshot_1670867410](https://user-images.githubusercontent.com/77542723/207117982-7d90535d-1e79-4cf1-b31f-6453a6102658.png)
+
 # Requirements
 **1.** Open an account on ZegoCloud.
 
