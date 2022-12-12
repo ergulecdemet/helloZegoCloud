@@ -28,7 +28,9 @@ Open the file your_project/app/src/main/AndroidManifest.xml, and add the followi
 <uses-permission android:name="android.permission.WAKE_LOCK" />
 ```
 In your project's *your_project > android > app* folder, create a proguard-rules.pro file with the following content as shown below:
+```
 -keep class **.zego.** { *; }
+```
 
 Add the following config code to the release part of the *your_project/android/app/build.gradle* file.
 ```
