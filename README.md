@@ -27,16 +27,16 @@ Open the file your_project/app/src/main/AndroidManifest.xml, and add the followi
 <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 <uses-permission android:name="android.permission.WAKE_LOCK" />
 ```
-In your project's 'your_project > android > app' folder, create a proguard-rules.pro file with the following content as shown below:
+In your project's *your_project > android > app* folder, create a proguard-rules.pro file with the following content as shown below:
 -keep class **.zego.** { *; }
 
-Add the following config code to the release part of the your_project/android/app/build.gradle file.
+Add the following config code to the release part of the *your_project/android/app/build.gradle* file.
 ```
 proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
 ```
 
 for iOS:
-To add permissions, open your_project/ios/Runner/Info.plist, and add the following code to the dict part:
+To add permissions, open *your_project/ios/Runner/Info.plist*, and add the following code to the dict part:
 ```
 <key>NSCameraUsageDescription</key>
 <string>We require camera access to connect to a call</string>
