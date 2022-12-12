@@ -12,6 +12,7 @@ It allows you to easily create your voice chat and live video chat applications 
 ```flutter pub add zego_uikit_prebuilt_call```
 
 *zego_uikit_prebuilt_call: ^1.2.13*
+you can see https://pub.dev/packages/zego_uikit_prebuilt_call
 # Permissions
 
 Don't forget to give permissions.
