@@ -8,7 +8,10 @@ It allows you to easily create your voice chat and live video chat applications 
 **2.** Select a use case for your app: Voice & Video Calls
 
 **3.** Write the Appid and Appsign given to you in the appropriate places in the call_page file.
+# Package
+```flutter pub add zego_uikit_prebuilt_call```
 
+*zego_uikit_prebuilt_call: ^1.2.13*
 # Permissions
 
 Don't forget to give permissions.
