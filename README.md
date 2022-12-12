@@ -36,8 +36,4 @@ To add permissions, open your_project/ios/Runner/Info.plist, and add the followi
 
 SOURCE: https://docs.zegocloud.com/article/14821
 
-Replace a text with PHP
-```
-$text = str_replace('one', 'an', 'There is one apple.')
-print $text;
-```
+'''  dndjjdjj '''
