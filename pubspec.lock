@@ -496,7 +496,7 @@ packages:
       name: zego_uikit
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.7.3"
+    version: "1.7.5"
   zego_uikit_prebuilt_call:
     dependency: "direct main"
     description:
@@ -504,6 +504,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.2.13"
+  zego_uikit_prebuilt_video_conference:
+    dependency: "direct main"
+    description:
+      name: zego_uikit_prebuilt_video_conference
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.1.10"
 sdks:
   dart: ">=2.18.4 <3.0.0"
   flutter: ">=3.0.0"
