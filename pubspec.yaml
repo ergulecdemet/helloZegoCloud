@@ -38,6 +38,9 @@ dependencies:
   cupertino_icons: ^1.0.2
   zego_uikit_prebuilt_call: ^1.2.13
   zego_uikit_prebuilt_video_conference: ^1.1.10
+  zego_zim: ^2.5.0+1
+  provider: ^6.0.5
+  dart_jsonwebtoken: ^2.6.2
 
 dev_dependencies:
   flutter_test:

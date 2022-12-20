@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:hellozegocloud/core/providers/zego_result_provider.dart';
 import 'package:hellozegocloud/pages/call_pages/group_video_call.dart';
 import 'package:hellozegocloud/pages/call_pages/group_voice_call.dart';
 import 'package:hellozegocloud/pages/call_pages/one_one_video_call.dart';
 import 'package:hellozegocloud/pages/call_pages/one_one_voice_call.dart';
 import 'package:hellozegocloud/pages/conferance_pages/video_conerance_page.dart';
+import 'package:provider/provider.dart';
+
+import 'core/constants/service/zego_service.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
   @override
   Widget build(BuildContext context) {
+    ZegoProvider zegoProvider = Provider.of<ZegoProvider>(context);
     return Scaffold(
         body: Center(
       child: SingleChildScrollView(
@@ -56,6 +61,36 @@ class HomePage extends StatelessWidget {
                 ).show(context);
               },
               child: const Text('Toplantoya Katıl'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                ZegoLoginService().loginWithZego();
+              },
+              child: const Text('Login'),
+            ),
+            ElevatedButton(
+                onPressed: () {
+                  ZegoLoginService().logoutZego();
+                },
+                child: const Text('Logout')),
+            ElevatedButton(
+              onPressed: () {
+                ZegoLoginService().loginWithZego2();
+              },
+              child: const Text('Login 2'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                ZegoLoginService().inviteZego(context);
+              },
+              child: const Text("Invite"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                print(zegoProvider.callId);
+                //  ZegoLoginService().acceptIniviteZego(context);
+              },
+              child: const Text("Accept Invitation"),
             ),
             // ZegoInRoomMessage(user: user, message: message, timestamp: timestamp, messageID: messageID)
           ],
