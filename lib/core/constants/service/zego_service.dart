@@ -1,8 +1,6 @@
-
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:hellozegocloud/core/constants/secret_keys.dart';
-import 'package:hellozegocloud/core/constants/service/handler/generate_token.dart';
 import 'package:hellozegocloud/core/providers/zego_result_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:zego_zim/zego_zim.dart';
@@ -25,11 +23,14 @@ class ZegoLoginService {
     print("ZımInfo $userInfo");
   }
 
-  loginWithZego() async {
-    userInfo.userName = "newName";
-    userInfo.userID = "12345";
+  loginWithZego(BuildContext context) async {
+    ZegoProvider zegoProvider =
+        Provider.of<ZegoProvider>(context, listen: false);
 
     await createZegoConfig();
+
+    userInfo.userID = zegoProvider.userId;
+    userInfo.userName = zegoProvider.userName;
 
     ZIM.getInstance()!.login(userInfo).then((value) {
       value;
@@ -45,16 +46,24 @@ class ZegoLoginService {
     });
   }
 
-  loginWithZego2() async {
-    userInfo.userName = "newName";
+  loginWithZego2(BuildContext context) async {
+    ZegoProvider zegoProvider =
+        Provider.of<ZegoProvider>(context, listen: false);
+    userInfo.userName = "newName2";
     userInfo.userID = "123456";
-
-    String token = GenerateToken().generateToken();
 
     await createZegoConfig();
 
-    ZIM.getInstance()!.login(userInfo, token).then((value) {
+    ZIM
+        .getInstance()!
+        .login(
+          userInfo,
+        )
+        .then((value) {
       value;
+      zegoProvider.userId = userInfo.userID;
+      zegoProvider.userName = userInfo.userName;
+      zegoProvider.notify();
     }).catchError((onError) {
       print(onError.toString());
       switch (onError.runtimeType) {

@@ -13,4 +13,16 @@ class ZimEventHandlerManager {
       print(info);
     };
   }
+
+  acceptInvitation(){
+    ZIMEventHandler.onCallInvitationAccepted =(zim, info, callID) {
+      
+    };
+  }
+
+  declineInvitation(){
+    ZIMEventHandler.onCallInvitationRejected =(zim, info, callID) {
+      
+    };
+  }
 }

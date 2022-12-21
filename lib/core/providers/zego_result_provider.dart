@@ -1,7 +1,12 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 
 class ZegoProvider extends ChangeNotifier {
   String callId = "";
+  String userId = "";
+  String userName = "";
+
+  String invitedFriendId = "";
+  bool isVideo = false;
 
   notify() {
     notifyListeners();
